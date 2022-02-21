@@ -3,9 +3,11 @@
 <html>
 
     <head>
+        <meta charset="utf-8">
+
         <title>Sean's CSCI570 Homework1</title>
         <link rel="icon" type="image/x-icon" href="../Resource/usc.ico">
-
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
         <style type="text/css">
             body{
                 background-color: rgb(35, 39, 48);
@@ -13,23 +15,41 @@
 
             .div1
             {
+                position: absolute;
+                left: 0px;
+                top: 0px;
                 height: 100px;
+                width: 1200px;
+                background-color: black;
+                
             }
 
-            .div2 img{
+            .div2{
                 position: absolute;
-                width:1000px;
+                top: 100px;
+                left: 0px;
+                width: 1200px;
+                height: 300px;
+                background:url('./rodeo-drive.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 0px -420px;
+            }
+
+            /* .div2 img{
+                position: absolute;
+                width:1200px;
                 left: 0px;
                 top: 100px;
-                clip: rect(0px,1000px,300px,0px);
+                /* clip: rect(0px,1200px,300px,0px); */
                 /* object-fit: ; */
-            }
+
             .div2 p{
                 position: absolute;
-                top: 220px;
-                left: 350px;
-                font-family:'Montserrat', Helvetica, sans-serif;
-                font-size: 30px;
+                top: 110px;
+                left: 420px;
+                font-family:'Comfortta';
+                font-size: 35px;
                 color: orange;
                 text-shadow: 1px 1px white;
                 /* text-align: center; */
@@ -41,32 +61,66 @@
                 height: 500px;
             }
             .Picbox{
-                background-color: black;
-                
+                background-color: rgb(13, 21, 34);
+                border-radius: 3px;
+                box-shadow: 3px 3px 10px rgb(27, 27, 27);
+                width: 330px;
+                height: 500px;
             }
             #picbox1{
                 position: absolute;
                 left: 80px;
-                width: 250px;
-                height: 300px;
-                box-shadow: 2px 2px 10px rgb(212, 212, 212)
             }
             #picbox2{
                 position: absolute;
-                left: 375px;
-                width: 250px;
-                height: 300px;
-                box-shadow: 2px 2px 10px rgb(145, 145, 145)
+                left: 435px;
             }
             #picbox3{
                 position: absolute;
-                left: 670px;
-                width: 250px;
-                height: 300px;
-                box-shadow: 2px 2px 10px rgb(27, 27, 27)
+                left: 790px;
             }
+
+            .picholder1{
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: 300px;
+                height: 180px;
+                border-radius: 3px;
+                background-color: (rgb(0,0,0));
+            }
+             .picholder1 img{
+                width: 100%; 
+                height: 100%; 
+                object-fit: cover;
+                border-radius: 3px;
+             }
+
+             .picholder1 p{
+                font-family: 'Comfortaa';
+                color: aliceblue;
+                width: 300px;
+                word-wrap: break-word;
+                line-height: 24px;
+             }
+
             
         </style>
+
+        <script>
+            var url = 'https://bytes.usc.edu/cs571/s22_Web0110Tech/lectures/JSON/data/teapot.json';
+            var req = new XMLHttpRequest();
+            req.open("GET", "data.json", true);
+            req.onreadystatechange = myCode; // the callback
+            req.send(null); 
+
+            function myCode() {
+                if (req.readyState == 4) {
+                if (req.Status == 200) {
+                var doc = parse
+                }
+            }
+        </script>
     </head>
 
 
@@ -78,7 +132,7 @@
 
         <div class="div2">
             <!-- Title image and title text here! -->
-            <img src="./rodeo-drive.jpg" alt="The Rodeo drive" >
+            <!-- <img src="./rodeo-drive.jpg" alt="The Rodeo drive" > -->
 
             <p>
                 LA - The City of Angels
@@ -88,23 +142,28 @@
 
         <div class="div3">
             <div class="Picbox" id="picbox1">
-
-
-            </div>
-            <div class="Picbox" id="picbox1">
-                
-
-            </div>
-            <div class="Picbox" id="picbox1">
-                
+                <div class="picholder1">
+                    <img src="https://github.com/SeanXiaoby/SeanXiaoby.github.io/blob/main/hw01/griffith.jpg" alt = "Griffith Observertory">
+                    <p style="font-size: 20px">Griffith Observertory</p>
+                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                </div>
 
             </div>
             <div class="Picbox" id="picbox2">
+                <div class="picholder1">
+                    <img src="./mountains.jpg", alt = "Mountains">
+                    <p style="font-size: 20px">Griffith Observertory</p>
+                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                </div>
                 
 
             </div>
             <div class="Picbox" id="picbox3">
-                
+                <div class="picholder1">
+                    <img src="./universalstudios.jpg", alt = "universalstudios">
+                    <p style="font-size: 20px">Griffith Observertory</p>
+                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                </div>
 
             </div>
 
