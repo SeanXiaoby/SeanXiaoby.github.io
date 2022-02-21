@@ -8,6 +8,7 @@
         <title>Sean's CSCI570 Homework1</title>
         <link rel="icon" type="image/x-icon" href="../Resource/usc.ico">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <style type="text/css">
             body{
                 background-color: rgb(35, 39, 48);
@@ -19,7 +20,7 @@
                 left: 0px;
                 top: 0px;
                 height: 100px;
-                width: 1200px;
+                width: 1920px;
                 background-color: black;
                 
             }
@@ -28,21 +29,21 @@
                 position: absolute;
                 top: 100px;
                 left: 0px;
-                width: 1200px;
-                height: 300px;
+                width: 1920px;
+                height: 400px;
                 background:url('./rodeo-drive.jpg');
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-position: 0px -420px;
+                background-position: 0px -760px;
             }
 
             .div2 p{
                 position: absolute;
-                top: 110px;
-                left: 420px;
-                font-family:'Comfortta';
-                font-size: 35px;
-                color: orange;
+                top: 150px;
+                left: 730px;
+                font-family: 'Montserrat';
+                font-size: 40px;
+                color: rgb(255, 153, 0);
                 text-shadow: 1px 1px white;
                 /* text-align: center; */
             }
@@ -50,34 +51,35 @@
             .div3{
                 position: absolute;
                 top: 500px;
-                height: 500px;
+                height: 1150px;
             }
             .Picbox{
                 background-color: rgb(13, 21, 34);
                 border-radius: 3px;
                 box-shadow: 3px 3px 10px rgb(27, 27, 27);
-                width: 330px;
-                height: 500px;
+                width: 450px;
+                height: 650px;
+                top: 250px;
             }
             #picbox1{
                 position: absolute;
-                left: 80px;
+                left: 245px;
             }
             #picbox2{
                 position: absolute;
-                left: 435px;
+                left: 730px;
             }
             #picbox3{
                 position: absolute;
-                left: 790px;
+                left: 1215px;
             }
 
             .picholder1{
                 position: absolute;
-                left: 15px;
-                top: 15px;
-                width: 300px;
-                height: 180px;
+                left: 20px;
+                top: 20px;
+                width: 410px;
+                height: 230px;
                 border-radius: 3px;
                 background-color: (rgb(0,0,0));
             }
@@ -89,30 +91,68 @@
              }
 
              .picholder1 p{
-                font-family: 'Comfortaa';
+                font-family: 'Montserrat';
                 color: aliceblue;
-                width: 300px;
+                width: 410px;
                 word-wrap: break-word;
-                line-height: 24px;
+                line-height: 30px;
+                letter-spacing: 2px;
+             }
+
+             .div4{
+                position: absolute;
+                background-color: rgb(13, 21, 34);
+                width: 1920px;
+                height: 700px;
+                top: 1650px;
+                left: 0px;
+             }
+
+             .div4 div{
+                position:absolute;
+                left: 250px;
+                top: 180px;
+                width: 695px;
+                height: 400px;
+             }
+
+             .content4{
+                font-family: 'Montserrat';
+                font-size: 21px;
+                color: rgb(224, 224, 224);
+                letter-spacing:2px;
+                line-height: 28px;
+                text-align: justify;
+             }
+             .div4 img{
+                 position:absolute;
+                 left: 990px;
+                 top: 200px;
+                 height: 400px;
+                 width: 695px;
              }
 
             
         </style>
-
+        
         <script>
-            // var url = 'https://bytes.usc.edu/cs571/s22_Web0110Tech/lectures/JSON/data/teapot.json';
-            // var req = new XMLHttpRequest();
-            // req.open("GET", "data.json", true);
-            // req.onreadystatechange = myCode; // the callback
-            // req.send(null); 
+            // fetch('http:127.0.0.1:8000/data.json')
+            // .then(response => response.json())
+            // .then(data => console.log(data));
+            async function getJSON() {
+                let url = 'http:127.0.0.1:8000/data.json';
+                try {
+                    let response = await fetch(url);
+                    console.log('Get json success!');
+                    return await response.json();
+                } catch (error) {
+                    console.log('Request Failed', error);
+                }
+            }
 
-            // function myCode() {
-            //     if (req.readyState == 4) {
-            //         if (req.Status == 200) {
-            //             var doc = parse
-            //         }
-            //     }
-            // }
+            const jsonData = getJSON();
+            // const parsedData = JSON.parse(jsonData);
+            console.log(jsonData.section2);
         </script>
     </head>
 
@@ -134,16 +174,16 @@
             <div class="Picbox" id="picbox1">
                 <div class="picholder1">
                     <img src="./griffith.jpg" alt = "Griffith Observertory">
-                    <p style="font-size: 20px">Griffith Observertory</p>
-                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                    <p style="font-size: 25px", id="title1">Griffith Observatory</p>
+                    <p style="font-size: 18px", id="content1">Griffith Observatory is southern California's gateway to the cosmos! Visitors may look through telescopes, explore exhibits, see live shows in the Samuel Oschin Planetarium, and enjoy spectacular views of Los Angeles and the Hollywood Sign.</p>
                 </div>
 
             </div>
             <div class="Picbox" id="picbox2">
                 <div class="picholder1">
                     <img src="./mountains.jpg", alt = "Mountains">
-                    <p style="font-size: 20px">Griffith Observertory</p>
-                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                    <p style="font-size: 25px", id="title2">Mountains</p>
+                    <p style="font-size: 18px", id="content2">Soaring high above the Los Angeles Basin, the San Gabriel Mountains serves as the backyard to the nation's second-largest urban center. This chaparral-cloaked land of steep ridges and V-shaped canyons is one of the wildest remaining areas in the surrounding Angeles National Forest</p>
                 </div>
                 
 
@@ -151,14 +191,27 @@
             <div class="Picbox" id="picbox3">
                 <div class="picholder1">
                     <img src="./universalstudios.jpg", alt = "universalstudios">
-                    <p style="font-size: 20px">Griffith Observertory</p>
-                    <p style="font-size: 16px">dhaiowdhoidhaiuwdhoawdghoawdoiwgdoiwagdoiawgdowagdoawwaduiawgdioawgdoiawgdoawgdhowaawdhoiawdohaowd</p>
+                    <p style="font-size: 25px", id="title3">Universal Studios</p>
+                    <p style="font-size: 18px", id="content3">Find a full day of action-packed entertainment all in one place: thrilling Theme Park rides and shows, a real working movie studio, and Los Angeles' best shops, restaurants and cinemas at CityWalk. Universal Studios Hollywood is a unique experience that's fun for the whole family.</p>
                 </div>
 
             </div>
 
         </div>
 
+        <div class="div4">
+            <div>
+                <p id = "content4_1" class = "content4">
+                    Los Angeles is the City of Dreams and is the heart of southern California. It is a vast and varied geographic entity. The city is famous  for being the home of the rich and famous, Hollywood, the main home of major entertainment companies, ethnically diverse, and the second-largest city in America.
+                </p>
+    
+                <p id = "content4_2" class = "content4">
+                    The residents of Los Angeles are called Angelenos. Their lifestyle relies on the automobile, idealizes the single-family dwelling, and favours informality. With notable exceptions, the skyline is primarily horizontal rather than vertical. Los Angeles is a place of extraordinary ethnic and racial diversity, owing largely to immigration. It is a must visit place and a beautiful vacation desination.
+                </p>
+            </div>
+            
+            <img src="./lasky.png">
+        </div>
 
     </body>
 
