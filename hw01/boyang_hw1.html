@@ -19,34 +19,51 @@
                 position: absolute;
                 left: 0px;
                 top: 0px;
-                height: 150px;
+                height: 120px;
                 width: 1920px;
                 background-color: black;
-                
+            }
+
+            .div1 a{
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 36px;
+                color: white;
+                text-shadow: 1.5px 1.5px rgb(255, 115, 0);
+                text-align: center;
+                vertical-align: middle;
+                text-decoration: none;
+                width: 250px;
+                height: 100px;
+            }
+            .div1 a:hover{
+                color: rgb(255, 115, 0);
+                text-shadow: 1.5px 1.5px white;
             }
 
             .div2{
                 position: absolute;
-                top: 150px;
+                top: 120px;
                 left: 0px;
                 width: 1920px;
-                height: 420px;
+                height: 450px;
                 background:url('./rodeo-drive.jpg');
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-position: 0px -740px;
+                background-position: 0px -705px;
             }
 
             .div2 p{
                 position: absolute;
                 top: 130px;
-                left: 700px;
+                left: 250px;
+                width: 1420px;
                 font-family: 'Montserrat';
                 font-weight: bold;
                 font-size: 45px;
                 color: rgb(255, 115, 0);
-                text-shadow: 2px 2px white;
-                /* text-align: center; */
+                text-shadow: 1.5px 1.5px white;
+                text-align: center;
             }
 
             .div3{
@@ -121,8 +138,8 @@
                 font-family: 'Montserrat';
                 font-size: 21px;
                 color: rgb(224, 224, 224);
-                letter-spacing:2px;
-                line-height: 28px;
+                /* letter-spacing:2px; */
+                line-height: 26px;
                 text-align: justify;
              }
              .div4 img{
@@ -131,6 +148,66 @@
                  top: 200px;
                  height: 400px;
                  width: 695px;
+             }
+
+             .div5{
+                 position:absolute;
+                 top:2350px;
+                 height: 900px;
+                 left: 0px;
+                 width: 1920px;
+                 font-family: 'Montserrat';
+                 color: rgb(224, 224, 224);
+             }
+
+             .div5 img{
+                 width: 400px;
+                 height: 250px;
+             }
+
+             .div5 div{
+                 width: 1000px;
+                 height: 250px;
+             }
+
+             .footer{
+                 position: absolute;
+                 top: 3250px;
+                 left: 0px;
+                 height: 300px;
+                 width: 1920px;
+                 background-color: black;
+                 font-family: 'Montserrat';
+                 color: rgb(224, 224, 224);
+                 font-size: 20px;
+                 line-height: 34px;
+                 text-align: center;
+             }
+
+             #goodwords{
+                position: absolute;
+                left: 250px;
+                top: 80px;
+                width: 650px;
+             }
+
+             #myInfo{
+
+                position: absolute;
+                left: 1270px;
+                top: 30px;
+                width: 250px;
+
+             }
+
+             #myInfo a{
+                 text-decoration: none;
+                 color: rgb(233, 233, 233);
+             }
+
+             #myInfo a:hover{
+                 text-decoration: underline;
+                 color: rgb(255, 255, 255);
              }
 
             
@@ -161,7 +238,9 @@
     <body>
         <div class="div1">
             <!-- three buttons -->
-            Put three buttons here!
+            <a href="./boyang_hw1.html" style="position: absolute; top: 40px; left: 585px;">Home</a>
+            <a href="./404notfound.html" style="position: absolute; top: 40px; left: 835px;">Explore</a>
+            <a href="./404notfound.html" style="position: absolute; top: 40px; left: 1085px;">Contact</a>
         </div>
 
         <div class="div2">
@@ -214,9 +293,60 @@
             <img src="./lasky.png">
         </div>
 
+        <div class="div5">
+            <img src="./hollywood.jpg" style="position:absolute;top:150px;left:250px">
+            <img src="./beach.jpg" style="position:absolute;top:480px;left:1270px">
+            <div style="position:absolute; top:130px; left:670px">
+                <p style="font-weight:bolder; font-size: 30px;">
+                    Hollywood
+                </p>
+                <p style="font-size: 20px; text-align: justify; line-height: 26px;">
+                    No trip to Los Angeles is complete without a visit to Hollywood, the home of movie studios, many of LA's most popular and historic tourist destinations, and its world-famous namesake boulevard. A larger-than-life symbol of the entertainment business, Hollywood beckons tourists with landmarks like TCL Chinese Theatre and star-studded Walk of Fame. Many tourists come to Hollywood to see all of these things. Because of the importance of Hollywood in the movie industry of the United States, the whole industry is often called "Hollywood", even though not all movies are made in Hollywood.
+                </p>
+
+            </div>
+
+            <div style="position:absolute; top:460px; left:250px">
+                <p style="font-weight:bolder; font-size: 30px; text-align: right;">
+                    Beaches
+                </p>
+                <p style="font-size: 20px; text-align: justify; line-height: 26px;">
+                    One of the biggest draws of the Los Angeles area is the beach scene (especially when you've had enough of the traffic). Los Angeles may possibly be the American city with the best overall variety of local beaches. There are a wide range of beaches within the large confines of Los Angeles County, and the county also neighbors miles and miles of other beach cities, spreading both north and south of LA. Families may enjoy large beaches like Santa Monica or Redondo Beach, with a wide range of facilities, retail areas, and amenities, while adventurers may like more secluded beaches like those found in Malibu or Palos Verdes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+            <div id = "goodwords">
+                <p style="text-align: center;">
+                    Tip the world over on its side and everything loose will land in Los Angeles.
+                </p>
+                <p style="text-align: center;">
+                    -Frank Lloyd Wright
+                </p>
+
+            </div>
+
+            <div id="myInfo">
+                <p style="font-weight: bolder; font-size: 26px;">
+                    Designed by
+                </p>
+                <p>
+                    Boyang (Sean) Xiao
+                </p>
+
+                <a href="mailto:boyangxi@usc.edu" target="_blank" style="color: rgb(224, 224, 224);">boyangxi@usc.edu<br></a>
+                <a href="tel:2135129165" style="color: rgb(224, 224, 224);">+1 (213) 512-9165</a>
+
+            </div>
+
+        </div>
+
+
     </body>
-
-
 
 
 </html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Sean's CSCI570 Homework1</title>
+        <link rel="icon" type="image/x-icon" href="../Resource/usc.ico">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <style type="text/css">
+            body{
+                background-color: rgb(35, 39, 48);
+            }
+
+            .div1
+            {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                height: 120px;
+                width: 1920px;
+                background-color: black;
+            }
+
+            .div1 a{
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 36px;
+                color: rgb(255, 115, 0);
+                text-shadow: 1.5px 1.5px white;
+                text-align: center;
+                vertical-align: middle;
+                text-decoration: none;
+                width: 250px;
+                height: 100px;
+            }
+            .div1 a:hover{
+                color: white;
+                text-shadow: 1.5px 1.5px rgb(255, 115, 0);
+            }
+
+            .div2{
+                position: absolute;
+                top: 120px;
+                left: 0px;
+                width: 1920px;
+                height: 450px;
+                background-color: yellow;
+                background:url('./404-featured.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 0px -320px;
+            }
+
+            .overlay{
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 102, 0, 0.42);
+            }
+
+            .div2 p{
+                position: absolute;
+                top: 130px;
+                left: 250px;
+                width: 1420px;
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 48px;
+                color: black;
+                text-align: center;
+            }
+
+            .NotFoundInfo{
+                position: absolute;
+                top: 570px;
+                height: 450px;
+                left: 0px;
+                width: 1920px;
+            }
+
+            .NotFoundInfo p{
+                position: absolute;
+                top: 130px;
+                left: 0px;
+                width: 1920px;
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 34px;
+                color:aliceblue;
+                text-align: center;
+            }
+                
+
+            .footer{
+                 position: absolute;
+                 top: 1000px;
+                 left: 0px;
+                 height: 300px;
+                 width: 1920px;
+                 background-color: black;
+                 font-family: 'Montserrat';
+                 color: rgb(224, 224, 224);
+                 font-size: 20px;
+                 line-height: 34px;
+                 text-align: center;
+             }
+
+             #goodwords{
+                position: absolute;
+                left: 250px;
+                top: 80px;
+                width: 650px;
+             }
+
+             #myInfo{
+                position: absolute;
+                left: 1270px;
+                top: 30px;
+                width: 250px;
+             }
+
+             #myInfo a{
+                text-decoration: none;
+             }
+
+             #myInfo a:hover{
+                text-decoration: underline;
+             }
+
+        </style>
+    </head>
+
+
+    <body>
+        <div class="div1">
+            <!-- three buttons -->
+            <a href="./boyang_hw1.html" style="position: absolute; top: 40px; left: 585px;">Home</a>
+            <a href="./404notfound.html" style="position: absolute; top: 40px; left: 835px;">Explore</a>
+            <a href="./404notfound.html" style="position: absolute; top: 40px; left: 1085px;">Contact</a>
+        </div>
+
+        <div class="div2">
+            <div class="overlay"></div>
+            <p>
+                Page not found
+            </p>
+        </div>
+
+        <div class="NotFoundInfo">
+            <p>The page you were looking for could not be found<br>
+                It might have been removed, renamed, or does not exist in the first place!
+            </p>
+
+        </div>
+
+        <div class="footer">
+
+            <div id = "goodwords">
+                <p style="text-align: center;">
+                    Tip the world over on its side and everything loose will land in Los Angeles.
+                </p>
+                <p style="text-align: center;">
+                    -Frank Lloyd Wright
+                </p>
+
+            </div>
+
+            <div id="myInfo">
+                <p style="font-weight: bolder; font-size: 26px;">
+                    Designed by
+                </p>
+                <p>
+                    Boyang (Sean) Xiao
+                </p>
+
+                <a href="mailto:boyangxi@usc.edu" target="_blank" style="color: rgb(224, 224, 224);">boyangxi@usc.edu<br></a>
+                <a href="tel:2135129165" style="color: rgb(224, 224, 224);">+1 (213) 512-9165</a>
+
+            </div>
+    
+        </div>
+
+    </body>
+
+
+</html>
