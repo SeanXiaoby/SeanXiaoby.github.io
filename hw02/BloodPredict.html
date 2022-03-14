@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Blood Pressure Prediction</title>
+        <link rel="icon" type="image/x-icon" href="../Resource/usc.ico">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <script  src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+        <style type="text/css">
+            .MainDiv {
+                position: absolute;
+                width: 800px;
+                height: 1000px;
+                font-family: 'Comfortaa';
+                text-align:center
+            }
+
+            .MainDiv p{
+                text-align: center;
+                margin-left: auto;
+            }
+
+            .InputDiv {
+                padding-bottom: 10px;
+            }
+
+            .InputDiv label {
+                position: absolute;
+                width:100px;
+                font-size: 18px;
+                right: 61%;
+                text-align:right; 
+                padding-right: 5px;
+                font-weight: bold;
+                vertical-align:middle;
+            }  
+
+            .InputDiv input {
+                padding:1px 1px;
+                border:1px solid #ccc;
+                height:24px;
+            }
+
+            .alertBox{
+                position: absolute;
+                width: 150px;
+                height: 35px;
+                left: 320px;
+                margin: 0 0;
+                border-radius: 6px;
+                background-color: rgba(0, 0, 0, 0.83);
+                vertical-align:middle;
+                color: aliceblue;
+                font-size: 10px;
+                line-height: 35px;
+                z-index: 50;
+                pointer-events: none;
+            }
+
+            #btnOK{
+                position: relative;
+                top: 10px;
+                left:-20px;
+                width: 100px;
+                height: 25px;
+                font-weight: bold;
+                background-color: rgb(80, 107, 167);
+                color: white;
+            }
+
+            #TextAnswer {
+                position: relative;
+                font-size: 18px;
+                font-weight: bold;
+                left: -20px;
+            }
+        </style>
+
+    </head>
+    
+
+    <body>
+        <div class = "MainDiv" style="top: 80px">
+            <p id = "titleText" style="font-size: 26px; color: brown; font-weight: bold;">
+                Blood Pressure Predictor
+            </p>
+
+            <p id = "DescriptionText" style="font-size: 20px; color: brown;">
+                Fill out the form to get your Blood Pressure estimate!
+            </p>
+
+
+            <div class = "InputDiv" id = "InputDiv1">
+                <form id = "formAge">
+                    <label for="InputAge">Age<span style="color:red;">* </span> </label>
+                    <input type="number" id="InputAge" class="InputText" placeholder="Enter age in YEARS" onfocus="ClearAlertNow(this)">
+                </form>
+                <p class = "alertBox" id = "AgeAlert"> </p>
+            </div>
+
+
+            <div class = "InputDiv" id = "InputDiv2">
+                <form id = "formWeight">
+                    <label for="InputWeight">Weight<span style="color:red;">* </span></label>
+                    <input type="number" id="InputWeight" class="InputText" placeholder="Enter weight in KG" onfocus="ClearAlertNow(this)">
+                </form>
+                <p class = "alertBox" id = "WeightAlert"> </p>
+            </div>
+
+            <div>
+                <button type="button" id = "btnOK" onclick="OnClickBtn(this)">Calculate</button>
+            </div>
+
+            <p id = "TextAnswer">
+                
+            </p>
+        </div>
+
+        
+        <script>
+            $("#AgeAlert").hide();
+            $("#WeightAlert").hide();
+        </script>
+
+
+        <script>
+            function OnClickBtn(id){
+                var Age = document.getElementById("InputAge").value;
+                var Weight = document.getElementById("InputWeight").value;
+                let flag = true;
+
+                if( Age == "" || !myIsNaN(Age) )
+                {
+                    ShowAlert("Age", "Please enter a number" );
+                    timeoutID = setTimeout(ClearAlert,2000);
+                    return;
+                }else if ( Weight == "" || !myIsNaN(Weight) )
+                {
+                    ShowAlert("Weight", "Please enter a number" );
+                    timeoutID = setTimeout(ClearAlert,2000);
+                    return;
+                }
+
+                alert("Success!!");
+                
+
+            }
+
+            function myIsNaN(value) {
+                return typeof Number(value) === 'number' && !isNaN(Number(value));
+            }   
+            
+            function ShowAlert(id, content){
+                var ElementId;
+                if(id == "Age")
+                {
+                    ElementId = document.getElementById("AgeAlert");
+                }else{
+                    ElementId = document.getElementById("WeightAlert");
+                }
+
+                ElementId.innerHTML = content;
+                $("#"+ElementId.id).fadeIn(200);
+                
+            }
+
+            function ClearAlert(){
+                // document.getElementById("AgeAlert").style.visibility = "hidden";
+                // document.getElementById("WeightAlert").style.visibility = "hidden";
+                $("#AgeAlert").fadeOut(1000);
+                $("#WeightAlert").fadeOut(1000);
+            }
+
+            function ClearAlertNow(id){
+                $("#AgeAlert").hide();
+                $("#WeightAlert").hide();
+
+            }
+
+        </script>
+
+    </body>
+
+
+
+
+
+</html>
