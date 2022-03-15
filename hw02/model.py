@@ -27,5 +27,4 @@ def load(strAge, strWeight):
     return prediction
 
 if __name__ == "__main__":
-    train()
     load("18","80")
