@@ -5,11 +5,11 @@
         <meta charset="utf-8">
 
         <title>Blood Pressure Prediction</title>
-        <link rel="icon" type="image/x-icon" href="../Resource/usc.ico">
+        <link rel="icon" type="image/x-icon" href="../static/usc.ico">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <!-- <script  src="http://code.jquery.com/jquery-latest.js"></script> -->
-        <script  src="./libs/jquery-3.6.0.min.js"></script>
+        <script  src="../static/jquery-3.6.0.min.js"></script>
 
 
         <style type="text/css">
@@ -95,30 +95,30 @@
                 Fill out the form to get your Blood Pressure estimate!
             </p>
 
+            <form method="POST" id = "mainForm">
 
-            <div class = "InputDiv" id = "InputDiv1">
-                <form id = "formAge">
+                <div class = "InputDiv" id = "InputDiv1">
+
                     <label for="InputAge">Age<span style="color:red;">* </span> </label>
-                    <input type="number" id="InputAge" class="InputText" placeholder="Enter age in YEARS" onfocus="ClearAlertNow(this)">
-                </form>
-                <p class = "alertBox" id = "AgeAlert"> </p>
-            </div>
+                    <input type="number" id="InputAge" class="InputText" name = "userAge" placeholder="Enter age in YEARS" onfocus="ClearAlertNow(this)">
+                    <p class = "alertBox" id = "AgeAlert"> </p>
+                </div>
 
 
-            <div class = "InputDiv" id = "InputDiv2">
-                <form id = "formWeight">
+                <div class = "InputDiv" id = "InputDiv2">
                     <label for="InputWeight">Weight<span style="color:red;">* </span></label>
-                    <input type="number" id="InputWeight" class="InputText" placeholder="Enter weight in KG" onfocus="ClearAlertNow(this)">
-                </form>
-                <p class = "alertBox" id = "WeightAlert"> </p>
-            </div>
+                    <input type="number" id="InputWeight" class="InputText" name = "userWeight" placeholder="Enter weight in KG" onfocus="ClearAlertNow(this)">
+                    <p class = "alertBox" id = "WeightAlert"> </p>
+                </div>
 
-            <div>
-                <button type="button" id = "btnOK" onclick="OnClickBtn(this)">Calculate</button>
-            </div>
+                <div>
+                    <button type="button" id = "btnOK" onclick="OnClickBtn(this)">Calculate</button>
+                </div>
+            </form>
+
 
             <p id = "TextAnswer">
-                
+                {{ answer }}.
             </p>
         </div>
 
@@ -126,6 +126,14 @@
         <script>
             $("#AgeAlert").hide();
             $("#WeightAlert").hide();
+
+            {% if inputAge %}
+                document.getElementById("InputAge").value = {{ inputAge }};
+            {% endif %}
+            {% if inputWeight %}
+                document.getElementById("InputWeight").value = {{ inputWeight }};
+            {% endif %}
+
         </script>
 
 
@@ -147,7 +155,8 @@
                     return;
                 }
 
-                alert("Success!!");
+                {#alert("Success!!");#}
+                SubmitAndRecv();
                 
 
             }
@@ -181,6 +190,10 @@
                 $("#AgeAlert").hide();
                 $("#WeightAlert").hide();
 
+            }
+
+            function SubmitAndRecv(){
+                document.getElementById("mainForm").submit();
             }
 
         </script>
