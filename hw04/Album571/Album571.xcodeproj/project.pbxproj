@@ -46,6 +46,7 @@
 		7C770193281FF69100ED00E9 /* Album571UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album571UITests.swift; sourceTree = "<group>"; };
 		7C770195281FF69100ED00E9 /* Album571UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album571UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7C7701A2281FF6D600ED00E9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7C7701A4281FF85700ED00E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		7C770177281FF69000ED00E9 /* Album571 */ = {
 			isa = PBXGroup;
 			children = (
+				7C7701A4281FF85700ED00E9 /* Info.plist */,
 				7C770178281FF69000ED00E9 /* Album571App.swift */,
 				7C77017A281FF69000ED00E9 /* ContentView.swift */,
 				7C7701A2281FF6D600ED00E9 /* ImagePicker.swift */,
@@ -424,6 +426,8 @@
 				DEVELOPMENT_TEAM = UDHRDHGQ29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Album571/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -453,6 +457,8 @@
 				DEVELOPMENT_TEAM = UDHRDHGQ29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Album571/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

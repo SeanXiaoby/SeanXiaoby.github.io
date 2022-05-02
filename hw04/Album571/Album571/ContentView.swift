@@ -10,6 +10,19 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
+    
+    var body: some View{
+        NavigationView {
+            Homeview()
+                .navigationTitle("Album 571")
+        }
+    }
+    
+    
+    
+}
+
+struct Homeview: View {
     @State private var showSheet: Bool = false
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
@@ -19,39 +32,40 @@ struct ContentView: View {
     
     var body: some View {
         let screenSize: CGRect = UIScreen.main.bounds
-        let photoWidth = screenSize.width/3.3
+        let photoWidth = screenSize.width/3.4
         
         ZStack(alignment: .topLeading) {
             Color.clear
             VStack(alignment: .leading) {
-                Text("Album 571")
-                    .font(.system(size: 35))
-                    .fontWeight(.bold)
-                    .padding()
+//                Text("Album 571")
+//                    .font(.system(size: 35))
+//                    .fontWeight(.bold)
+//                    .padding()
                 ScrollView{
                     LazyVGrid(columns: [
                         GridItem(.flexible()),
                         GridItem(.flexible()),
                         GridItem(.flexible())
-                    ], spacing: 18 ){
+                    ], spacing: 8 ){
                         ForEach(imageArr, id: \.self){ image in
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: photoWidth, height: photoWidth)
-                                .background(Color.pink)
-                                .foregroundColor(.white)
-                                .cornerRadius(10.0)
+                            NavigationLink(destination: ImageView(InputImage: image), label: {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: photoWidth, height: photoWidth)
+                                    .background(Color.pink)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10.0)
+                            })
                         }
                         
                     }
                     
-                }
+                }.padding()
                 HStack(alignment: .center){
                     Button(action:{
                         self.showImagePicker = true
                         self.sourceType = .photoLibrary
-                        AddPhoto()
                         
                     }){
                         HStack{
@@ -69,7 +83,6 @@ struct ContentView: View {
                     Button(action:{
                         self.showImagePicker = true
                         self.sourceType = .camera
-                        AddPhoto()
                     }){
                         HStack{
                             Image(systemName: "camera")
@@ -95,11 +108,32 @@ struct ContentView: View {
         
     }
     
-    func AddPhoto(){
-       
+}
+
+struct ImageView: View {
+    
+    var InputImage: UIImage?
+    
+    var body: some View{
+        VStack{
+            Image(uiImage: InputImage!)
+                .resizable()
+                .scaledToFit()
+            
+            let heightInPoints = InputImage!.size.height
+            let heightInPixels = Int(ceil(heightInPoints * InputImage!.scale))
+
+            let widthInPoints = InputImage!.size.width
+            let widthInPixels = Int(ceil(widthInPoints * InputImage!.scale))
+            
+//            let strWidth = String(widthInPixels)
+//            let strHeight = String(heightInPixels)
+            Text("Image width: \(widthInPixels) px")
+            Text("Image height: \(heightInPixels) px")
+            
+        }
+        .padding(5)
     }
-    
-    
 }
 
 
