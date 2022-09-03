@@ -1,0 +1,685 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\49169\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="ee542-lab02">EE542 - Lab02</h1>
+
+<h3 class="mume-header" id="building-a-server-router-client-topological-model-on-aws">Building a Server-Router-Client topological model on AWS</h3>
+
+<hr>
+<h4 class="mume-header" id="topics">Topics:</h4>
+
+<ul>
+<li>Initializing Virual Private Cloud (VPC) service and EC2 instances on AWS</li>
+<li>Using AWS VPC services and EC2 instances to build a Server-Router-Client network model</li>
+<li>Exploring to configure routing settings for different components in Computer Networks</li>
+<li>Learning to install iPerf and iPerf3 tools on Linux to measure the bandwidths of computers&apos; network access</li>
+</ul>
+<h4 class="mume-header" id="author-boyang-xiaohttpswwwlinkedincominboyang-xiao-40b644225">Author: <a href="https://www.linkedin.com/in/boyang-xiao-40b644225/">Boyang Xiao</a></h4>
+
+<ul>
+<li><strong>USC id</strong>:		3326-7302-74</li>
+<li><strong>Email</strong>:		<a href="mailto:boyangxi@usc.edu">boyangxi@usc.edu</a></li>
+<li><strong>Github</strong>:	<a href="https://github.com/SeanXiaoby">here</a></li>
+</ul>
+<h4 class="mume-header" id="dev-environment">Dev Environment:</h4>
+
+<ul>
+<li><strong>AWS acount:</strong> Free tier</li>
+<li><strong>Installed VM OS</strong>: <a href="https://aws.amazon.com/marketplace/pp/prodview-o7dahbop7getw?sr=0-1&amp;ref_=beagle&amp;applicationId=AWSMPContessa">vyOS 1.3</a>, <a href="https://aws.amazon.com/marketplace/pp/prodview-pkjqrkcfgcaog?sr=0-1&amp;ref_=beagle&amp;applicationId=AWSMPContessa">Ubuntu 18.04 LTS</a></li>
+</ul>
+<h4 class="mume-header" id="video-introductions"><a href>Video Introductions</a></h4>
+
+<hr>
+<h2 class="mume-header" id="creating-vpc-and-ec2-instances-on-aws">Creating VPC and EC2 instances on AWS</h2>
+
+<h3 class="mume-header" id="vpc-configuration">VPC configuration</h3>
+
+<p>Click on AWS VPC console and create a new VPC by clicking the button on the upper-right corner</p>
+<p>Configurations for VPC (as shown in the following picture):<br>
+- <strong>Name</strong>: ee542-lab02<br>
+- <strong>IPv4 CIDR</strong>: 10.0.0.0/16<br>
+- <strong>Disable</strong> IPv6 CIDR</p>
+<p>Click on the subnets tab on the left side-bar. Add four subnets to the VPC, partitioning the IPv4 CIDR into four domains:<br>
+- Subnet-1: 10.0.1.0/24<br>
+- Subnet-2: 10.0.2.0/24<br>
+- Subnet-3: 10.0.3.0/24<br>
+- Subnet-4: 10.0.4.0/24</p>
+<img src="./src/img1-2.png" width="80%">
+<h3 class="mume-header" id="get-elastic-ip-addresses-assigned-by-aws">Get Elastic IP addresses assigned by AWS</h3>
+
+<p>An <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">elastic ip</a> addresse is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is allocated to your AWS account, and is yours until you release it.</p>
+<p>Click the Elastic IP tab on the left side-bar. Allocate <strong>three elastic ip addresses</strong> for further use.</p>
+<p>These three elastic ip addresses can be the public IPv4 addresses for the ServerVM, RouterVM and ClientVM, which can be used to access the open Internet by the virtual machines.</p>
+<p>&#x2757;When the elastic ip addresses are associated with an EC2 instance, it will be billed a little amount of fee, even if the instance is closed. Please release the elastic ip addresses if they are not in use anymore to avoid more billings!!</p>
+<img src="./src/img1-3.png" width="80%">
+<h3 class="mume-header" id="create-ec2-elastic-computing-clouds-instances">Create EC2 (Elastic computing clouds) instances</h3>
+
+<p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html">Amazon Elastic Compute Cloud (Amazon EC2)</a> provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.</p>
+<ul>
+<li>Create one instance and install vyOS 1.3 in it as a RouterVM.</li>
+<li>Create two instances and install Ubuntu 18.04 in them as a ClientVM and a ServerVM.</li>
+</ul>
+<img src="./src/img1-4.png" width="80%">
+<hr>
+<h2 class="mume-header" id="building-a-server-router-client-model-on-aws">Building a Server-Router-Client model on AWS</h2>
+
+<h3 class="mume-header" id="configure-routing-relations-for-ec2-instances">Configure routing relations for EC2 instances</h3>
+
+<p>Configure two network interfaces for each instance, one for SSH access, the other for internal networks access.</p>
+<ul>
+<li>The network interfaces which are connecting to the outside internet <strong>should be associated with one of the elastic IP addresses</strong> we got. The instance can use this interface to connect to the open Internet domains and can also be accessed by outside SSH clients.</li>
+<li>The network interfaces which are used for internal communications should <strong>share the same subnet domains</strong> for three instances so that they can access to each other in this same subnet domains. Here, we chose 10.0.2.0/24 domain as the internal networks domain.</li>
+</ul>
+<p>The mapping relations between each instance&apos;s network interfaces is shown below.</p>
+<table>
+<thead>
+<tr>
+<th>Instance name</th>
+<th>OS</th>
+<th>Network interface #</th>
+<th>Subnet domain</th>
+<th>Mapping to</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vyOS-lab02-router</td>
+<td>vyOS 1.3</td>
+<td>eth0</td>
+<td>10.0.1.0/24</td>
+<td>Elastic ip #1: lab02-ip-vyos</td>
+<td>SSH access from outside</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>eth1</td>
+<td>10.0.2.0/24</td>
+<td>Client and Server VMs</td>
+<td>Internal communications</td>
+</tr>
+<tr>
+<td>Ubuntu-lab02-Client</td>
+<td>Ubuntu 18.04</td>
+<td>eth0</td>
+<td>10.0.2.0/24</td>
+<td>Router VM</td>
+<td>Internal communications</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>eth1</td>
+<td>10.0.3.0/24</td>
+<td>Elastic ip #2: lab02-ip-client</td>
+<td>SSH access from outside</td>
+</tr>
+<tr>
+<td>Ubuntu-lab02-Server</td>
+<td>Ubuntu 18.04</td>
+<td>eth0</td>
+<td>10.0.2.0/24</td>
+<td>Router VM</td>
+<td>Internal communications</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>eth1</td>
+<td>10.0.4.0/24</td>
+<td>Elastic ip #3: lab02-ip-server</td>
+<td>SSH access from outside</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="launch-the-instances-and-access-them-by-ssh">Launch the instances and access them by SSH</h3>
+
+<p>Create and launch three instances and wait for them to be prepared. When the instances are ready and the elastic ip addresses are configured right, we should be able to ping these three elastic ip addresses well. <a href="https://networkappers.com/tools/ping-tool">Here</a> is a little online Ping tool we can use to test that.</p>
+<p><strong>Authentication:</strong> When creating the instances, AWS should create a key pair for them. This is for authentication when logging into the instances, so we don&apos;t need to input user/passwd. This should be a [*.pem] file and please keep it safe on the local end.</p>
+<p>Open three terminal windows on the local end. Enter the folder where the .pem file is, and input the following commond to <em>SSH</em> into the instances&apos; OS:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ssh</span> -i <span class="token string">&quot;lab02.pem&quot;</span> <span class="token operator">&lt;</span>OS name<span class="token operator">&gt;</span>@<span class="token operator">&lt;</span>ELastic <span class="token function">ip</span> address<span class="token operator">&gt;</span>
+</pre><p>For example: If we want to <em>ssh</em> into the vyOS router vm, we can execute:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ssh</span> -i <span class="token string">&quot;lab02.pem&quot;</span> vyos@52.37.148.54
+</pre><p>Or if we want to <em>ssh</em> into the Server VM, we can :</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ssh</span> -i <span class="token string">&quot;lab02.pem&quot;</span> ubuntu@52.38.44.116
+</pre><p>In this way, we can access and operate on the instances operating systems we created.</p>
+<p>&#x26A0; <strong>There is one thing we should be careful with:</strong></p>
+<p>If the ELastic IP is associated with a eth1 interface of a instance, we may not be able to access to it through SSH, since the initialized Linux VM has no open&amp; running eth1 interface but only has eth0. We can associate the elastic ip address with eth0 and get into the instance first. Than we open up eth1 and configure its IPv4 address as allocated by AWS and set the routing rules. We can refer to <a href="https://serverfault.com/questions/1066245/cannot-ssh-to-second-network-interface-in-ubuntu-20-04-on-ec2">this post</a> to set the rules.</p>
+<hr>
+<h2 class="mume-header" id="test-networks-connections-for-the-model-and-set-routing-rules">Test networks connections for the model and set routing rules</h2>
+
+<h4 class="mume-header" id="goal">Goal:</h4>
+
+<ul>
+<li>Make these three Vms can connect with each other under the same subnet domain.</li>
+<li>Build the routing model: When Server and Client communicates with each other, the traffic should be like:
+<ul>
+<li>Server -&gt; Router -&gt; Client</li>
+<li>Client -&gt; Router -&gt; Server</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="test-networks-connection-using-ping-cmd-and-tcpdump-cmd">Test Networks connection using Ping cmd and tcpdump cmd</h3>
+
+<p><a href>Tcpdump</a> is a very useful tool on Linux which can help us to monitor TCP/UDP packets switching status through a host. We can open up tcpdump on vyOS router VM to monitor if there is any network in/out through the router:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">tcpdump -i eth1 <span class="token function">host</span> <span class="token operator">&lt;</span>ServerVM eth0 IP address<span class="token operator">&gt;</span> or <span class="token function">host</span> <span class="token operator">&lt;</span>ClientVM eth0 IP address<span class="token operator">&gt;</span>
+</pre><p>If we directly ping ServerVM on the client VM like below.</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ping</span> <span class="token operator">&lt;</span>Server eth0 IP address<span class="token operator">&gt;</span>
+</pre><p>We can surely success because the ServerVM and ClientVM is under the same subnet and they can surely access each other. But we can also notice that there is no networks activity on the router machine, since the Server and CLient communicate with each other directly, but don&apos;t go through the router.</p>
+<img src="./src/img3-1.png" width="100%">
+<h3 class="mume-header" id="configure-routing-relations-on-servervm-and-clientvm">Configure Routing relations on ServerVM and ClientVM</h3>
+
+<p>To make the networks between ServerVM and ClientVM passing through the RouterVM and be routed by the router, we should configure the Routing table on both the ServerVM and ClientVM. If we look into any one of these two &apos;s routing table using:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">route -n
+</pre><p>We can find that there is no special routing info. All the networks are routed by default.</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+<span class="token number">0.0</span>.0.0         <span class="token number">10.0</span>.2.1        <span class="token number">0.0</span>.0.0         UG    <span class="token number">100</span>    <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.2.0        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.0   U     <span class="token number">0</span>      <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.2.1        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.255 UH    <span class="token number">100</span>    <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.3.0        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.0   U     <span class="token number">0</span>      <span class="token number">0</span>        <span class="token number">0</span> eth1
+</pre><p>To be specifc, we should add a <strong>Gateway</strong> for the destination IP address on the both end:</p>
+<ul>
+<li>For the Client, the destination ip is Server&apos;s ip and the gateway is the Router&apos;s ip.</li>
+<li>For the Server, the destination ip is the client&apos;s ip, and the gateway is the Router&apos;s ip.</li>
+</ul>
+<p>For example, we execute this on the Client side:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> route <span class="token function">add</span> -host <span class="token operator">&lt;</span>ServerVM eth0 IP address<span class="token operator">&gt;</span> gw <span class="token operator">&lt;</span>RouterVM eth1 IP address<span class="token operator">&gt;</span>
+</pre><p>And we execute this on the Server side:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> route <span class="token function">add</span> -host <span class="token operator">&lt;</span>ClientVM eth0 IP address<span class="token operator">&gt;</span> gw <span class="token operator">&lt;</span>RouterVM eth1 IP address<span class="token operator">&gt;</span>
+</pre><p>Then we can find an extra rule on the routing table:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+<span class="token number">0.0</span>.0.0         <span class="token number">10.0</span>.2.1        <span class="token number">0.0</span>.0.0         UG    <span class="token number">100</span>    <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.2.0        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.0   U     <span class="token number">0</span>      <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.2.1        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.255 UH    <span class="token number">100</span>    <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.2.163      <span class="token number">10.0</span>.2.64       <span class="token number">255.255</span>.255.255 UGH   <span class="token number">0</span>      <span class="token number">0</span>        <span class="token number">0</span> eth0
+<span class="token number">10.0</span>.3.0        <span class="token number">0.0</span>.0.0         <span class="token number">255.255</span>.255.0   U     <span class="token number">0</span>      <span class="token number">0</span>        <span class="token number">0</span> eth1
+</pre><p>Then we Ping ServerVm from ClientVM again and monitor Router&apos;s networks activities. We can find that the Router has networks activities from both Server side and Client side, as shown in the picture below. And we can say that <strong>the network communication has been configured as we expected.</strong></p>
+ <img src="./src/img3-2.png" width="100%">
+<h2>Other Questions and Answers</h2>
+<p><strong>Q: How is amazon able to convert your public IP and reach your private IP on the interface?</strong></p>
+<p><strong>Answer</strong>: The elastic ip addresses are randomly assigned by AWS and AWS server actually works as a router when an elastic ip is allocated to the user. The AWS server will create a mapping table to route all the network traffic from the public internet from this elastic IP to the instances&apos; private ip address.</p>
+<p><strong>Q: Why SSH goes down if IP is changed on that interface</strong></p>
+<p><strong>Answer</strong>: When we use SSH to access an EC2 instance, we firstly connect to the elastic ip address associated with this instance, and AWS will route us from this elastic ip to the instance&apos;s private ip, then we can control the instance&apos;s OS. If we change any IP configurations on the console interface while SSH is still on, SSH connections will lose because we are actually changing the mapping table from the elastic ip to the instance and AWS will have errors routing the networks between us and the instances.</p>
+<hr>
+<h2 class="mume-header" id="networks-measurement-with-iperf-iperf3">Networks measurement with iPerf &amp; iPerf3</h2>
+
+<p><a href="https://iperf.fr/iperf-download.php">iPerf</a> is a tool for network performance measurement and tuning. It is a cross-platform tool that can produce standardized performance measurements for any network. Iperf has client and server functionality, and can create data streams to measure the throughput between the two ends in one or both directions. Typical iperf output contains a time-stamped report of the amount of data transferred and the throughput measured.</p>
+<h3 class="mume-header" id="install-iperfiperf3-on-ubuntu-vms">Install iPerf/iPerf3 on Ubuntu VMs</h3>
+
+<p>For either Client VM or Server VM: First, we enter root:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> <span class="token function">su</span>
+</pre><p>If  we directly install iPerf/iPerf3, it will fail:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y iperf
+</pre><p>We should install some dependancies ahead:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">apt-get</span> <span class="token function">install</span> linux-tools-common
+<span class="token function">apt-get</span> update
+<span class="token function">apt-get</span> <span class="token function">install</span> linux-tools-generic linux-cloud-tools-generic
+<span class="token function">apt-get</span> <span class="token function">install</span> linux-tools-5.4.0-77-generic
+<span class="token function">apt-get</span> <span class="token function">install</span> linux-cloud-tools-5.4.0-77-generic
+</pre><p>Then we install iPerf/iPerf3:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y iperf
+</pre><p>It may still fail, and we follow the instructions on the terminal:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">--fix-broken <span class="token function">install</span>
+</pre><p>If there is an error named &quot;subprocess was killed by signal (Broken pipe)&quot; or something like that, we can refer to <a href="https://stackoverflow.com/questions/72442108/dpkg-dep-error-paste-subprocess-was-killed-by-signalbroken-pipe-ubuntu-wsl2">this post</a>(Btw, this dude literally saved my ass when installing the dumbasss iPerf&#x1F605;) and excecute:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> dpkg -i --force-overwrite <span class="token operator">&lt;</span><span class="token environment constant">PATH</span> to the overwritten files<span class="token operator">&gt;</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> -f <span class="token function">install</span>
+</pre><p>Find every file that is said to be overwritten on the terminal and fill them into the commands above. For example, on my virtual machines:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> dpkg -i --force-overwrite /var/cache/apt/archives/linux-azure-5.4-tools-5.4.0-1078_5.4.0-1078.81~18.04.1_amd64.deb
+<span class="token function">sudo</span> dpkg -i --force-overwrite /var/cache/apt/archives/linux-gcp-5.4-tools-5.4.0-1078_5.4.0-1078.84~18.04.1_amd64.deb
+<span class="token function">sudo</span> dpkg -i --force-overwrite  /var/cache/apt/archives/linux-gke-5.4-tools-5.4.0-1078_5.4.0-1078.84~18.04.1_amd64.deb
+<span class="token function">sudo</span> dpkg -i --force-overwrite  /var/cache/apt/archives/linux-oracle-5.4-tools-5.4.0-1078_5.4.0-1078.86~18.04.1_amd64.deb
+<span class="token function">sudo</span> <span class="token function">apt</span> -f <span class="token function">install</span>
+</pre><p>Then we can install all we want:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y iperf
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y iperf3
+</pre><h3 class="mume-header" id="measure-the-networks-using-iperf3">Measure the networks using iPerf3</h3>
+
+<p>First, we configure the <strong>ServerVM</strong> as an iPerf3 server:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">iPerf3 -s
+</pre><p>Note the portnum assigned to the Server and use iPerf3 on the <strong>Client VM</strong> to communicate with the Server:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">iperf3 -u -c <span class="token number">10.0</span>.2.163 -b <span class="token operator">&lt;</span>portnum<span class="token operator">&gt;</span>
+</pre><p>The Client VM will send/receive an amount of packets with the Server and this process will last for 10 secs. Both ends will show the info:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">35417</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">88.0</span> KBytes   <span class="token number">721</span> Kbits/sec  <span class="token number">11</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">808</span> KBytes   <span class="token number">662</span> Kbits/sec  <span class="token number">0.060</span> ms  <span class="token number">0</span>/100 <span class="token punctuation">(</span><span class="token number">0</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">100</span> datagrams
+</pre><p>We can then read the Bandwidth, jitter and datagrams loss from the measurement results. If we open tcpdump on the router, we can also find that all the networks traffics pass through the router and they are all using UDP/IP protocol.</p>
+ <img src="./src/img4-1.png" width="100%">
+<h2 class="mume-header" id="add-delayloss-to-the-virtual-machines-and-measure-the-networks">Add delay/loss to the virtual machines and measure the networks</h2>
+
+<p>To emulate the network delay and network loss scenarios, we can manually add some delay and loss to the ip config and explore the iPerf measurement results again.</p>
+<p><strong>First</strong>, we add delay to both the Server and the Client with the following commands:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> tc qdisc <span class="token function">add</span> dev eth0 root netem delay 100ms
+</pre><p>And we do the measurements again. The results are as following:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">55948</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">800</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">0.143</span> ms  <span class="token number">0</span>/99 <span class="token punctuation">(</span><span class="token number">0</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">99</span> datagrams
+</pre><p>We can find that, the bandwidth has not changed at all. But the jitter can be twice as much. <strong>Therefore</strong>, the networks delay can influence the jitter but not the bandwidth.</p>
+<p><strong>Then</strong>, we remove the delay and add loss to both virtual machines (note that this time we use <strong>change</strong> command but not <strong>add</strong>):</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> tc qdisc change dev eth0 root netem delay 0ms loss <span class="token number">10</span>%
+</pre><p>And we get the measurements results again:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">35747</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">88.0</span> KBytes   <span class="token number">721</span> Kbits/sec  <span class="token number">11</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">808</span> KBytes   <span class="token number">662</span> Kbits/sec  <span class="token number">0.084</span> ms  <span class="token number">10</span>/100 <span class="token punctuation">(</span><span class="token number">10</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">100</span> datagrams
+</pre><p>As we expected, the jitter gets back to normal because we set the delay back to 0ms. And the datagrams loss gets up to 10%, because we set the loss to be 10%. As always, the bandwidth is still the same.</p>
+<p><strong>Next</strong>, we delete the configurations we set just now:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> tc qdisc del dev eth0 root
+</pre><p>And we set another scenario: we limit the networks rate to 100mbit, latency to 1 ms and burst 9015:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span> tc qdisc <span class="token function">add</span> dev eth0 root tbf rate 100mbit latency 1ms burst <span class="token number">9015</span>
+</pre><p>We measure again and the results:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">45441</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">88.0</span> KBytes   <span class="token number">721</span> Kbits/sec  <span class="token number">11</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">808</span> KBytes   <span class="token number">662</span> Kbits/sec  <span class="token number">0.071</span> ms  <span class="token number">0</span>/100 <span class="token punctuation">(</span><span class="token number">0</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">100</span> datagrams
+</pre><p>We can find that all the results remain the same, because the existing bandwidth is way lower than the limitaions we set, so the limitations do not affect the results. If we set the rate to be really small, and we will see that the data transferring rate will desend fast.</p>
+<p><strong>Last</strong>, we set speed for the instance:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">ubuntu@ip-10-0-2-86:~$ <span class="token function">sudo</span> <span class="token function">ethtool</span> -s eth0 speed <span class="token number">10</span>
+Cannot get current device settings: Operation not supported
+  not setting speed
+</pre><p>We can find that AWS does not allow us to excecute this operation, because every instance has a fixed bandwidth resource and it is not allowed to modify.</p>
+<h3 class="mume-header" id="add-delay-loss-on-the-router-and-measure-again">Add delay / loss on the Router and measure again</h3>
+
+<p>Let&apos;s do the same thing on the &amp; only on <strong>router</strong>, launch the Server and Client using iPerf3 again and see what will happen.</p>
+<p><strong>First</strong>, we add 100ms delay for the router.</p>
+<p>&#x2757;Note that: Router uses eth1 as the internal network interface. <strong>We should add delay to eth1 but not eth0</strong>!!!</p>
+<p>Here are the results:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">59975</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">800</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">0.059</span> ms  <span class="token number">0</span>/99 <span class="token punctuation">(</span><span class="token number">0</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">99</span> datagrams
+</pre><p>We can find that the results are similar as we got from the Server/Client settings: <strong>the Jitter can be higher due to the higher delay.</strong> If we look into the info from the Server end, we can even find the jitter varies a lot within these 10 secs and the delay can really affect the network stablily.</p>
+<p><strong>Then</strong> we set Router delay to 0ms and loss to 10%. Here are the results:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">35957</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">88.0</span> KBytes   <span class="token number">721</span> Kbits/sec  <span class="token number">11</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">808</span> KBytes   <span class="token number">662</span> Kbits/sec  <span class="token number">0.087</span> ms  <span class="token number">11</span>/100 <span class="token punctuation">(</span><span class="token number">11</span>%<span class="token punctuation">)</span>
+</pre><p>Same, the results from iPerf3 say that the average loss comes up to approximately 10%, as we expected.</p>
+<p><strong>Next</strong>, we limit the networks rate to 100mbit, latency to 1 ms and burst 9015. Here are the results:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">Connecting to <span class="token function">host</span> <span class="token number">10.0</span>.2.163, port <span class="token number">5201</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> <span class="token builtin class-name">local</span> <span class="token number">10.0</span>.2.86 port <span class="token number">54763</span> connected to <span class="token number">10.0</span>.2.163 port <span class="token number">5201</span>
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-1.00   sec  <span class="token number">88.0</span> KBytes   <span class="token number">721</span> Kbits/sec  <span class="token number">11</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">1.00</span>-2.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">2.00</span>-3.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">3.00</span>-4.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">4.00</span>-5.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">5.00</span>-6.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">6.00</span>-7.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">7.00</span>-8.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">8.00</span>-9.00   sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">9.00</span>-10.00  sec  <span class="token number">80.0</span> KBytes   <span class="token number">655</span> Kbits/sec  <span class="token number">10</span>
+- - - - - - - - - - - - - - - - - - - - - - - - -
+<span class="token punctuation">[</span> ID<span class="token punctuation">]</span> Interval           Transfer     Bandwidth       Jitter    Lost/Total Datagrams
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span>   <span class="token number">0.00</span>-10.00  sec   <span class="token number">808</span> KBytes   <span class="token number">662</span> Kbits/sec  <span class="token number">0.031</span> ms  <span class="token number">0</span>/100 <span class="token punctuation">(</span><span class="token number">0</span>%<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>  <span class="token number">4</span><span class="token punctuation">]</span> Sent <span class="token number">100</span> datagrams
+</pre><p><strong>Same</strong>, it does not affect the networks at all, as expected.</p>
+<h4 class="mume-header" id="conclusion">Conclusion:</h4>
+
+<ul>
+<li>Either we add delay / loss / rate limit on the Server, Client or Router end, the network measurement results can be similar. If we add to them at the same time, the limit of network can be the bottleneck among these three components.</li>
+<li>Delay: affect the network connections&apos; stability and add jitters.</li>
+<li>Loss: affect the datagrams loss rate.</li>
+<li>Rate limit: affect the bandwidth.</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="the-end">The End</h2>
+
+<p>This concludes the whole network emulations on AWS. We can do more on AWS, such as building internal networks structures based on these topological relations, or building some CDN servers or machine learning computing servers and using parallel computing on AWS. Anyway, this way to build a network is pretty fun!</p>
+<p>If you have any concerns, please contact me at <a href="mailto:boyangxi@usc.edu">boyangxi@usc.edu</a> &#x2764;</p>
+<p><em>Fight on Trojans!</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
