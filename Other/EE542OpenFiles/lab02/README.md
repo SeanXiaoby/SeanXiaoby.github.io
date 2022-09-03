@@ -29,15 +29,15 @@
 Click on AWS VPC console and create a new VPC by clicking the button on the upper-right corner
 
 Configurations for VPC (as shown in the following picture):
-    - **Name**: ee542-lab02
-    - **IPv4 CIDR**: 10.0.0.0/16
-    - **Disable** IPv6 CIDR
+- **Name**: ee542-lab02
+- **IPv4 CIDR**: 10.0.0.0/16
+- **Disable** IPv6 CIDR
 
 Click on the subnets tab on the left side-bar. Add four subnets to the VPC, partitioning the IPv4 CIDR into four domains:
-    - Subnet-1: 10.0.1.0/24
-    - Subnet-2: 10.0.2.0/24
-    - Subnet-3: 10.0.3.0/24
-    - Subnet-4: 10.0.4.0/24
+- Subnet-1: 10.0.1.0/24
+- Subnet-2: 10.0.2.0/24
+- Subnet-3: 10.0.3.0/24
+- Subnet-4: 10.0.4.0/24
 
 
 <img src="./src/img1-2.png" width="80%">
@@ -56,8 +56,8 @@ These three elastic ip addresses can be the public IPv4 addresses for the Server
 
 ### Create EC2 (Elastic computing clouds) instances 
 [Amazon Elastic Compute Cloud (Amazon EC2)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
-  - Create one instance and install vyOS 1.3 in it as a RouterVM.
-  - Create two instances and install Ubuntu 18.04 in them as a ClientVM and a ServerVM.
+- Create one instance and install vyOS 1.3 in it as a RouterVM.
+- Create two instances and install Ubuntu 18.04 in them as a ClientVM and a ServerVM.
 
 <img src="./src/img1-4.png" width="80%">
 
@@ -67,8 +67,8 @@ These three elastic ip addresses can be the public IPv4 addresses for the Server
 
 ### Configure routing relations for EC2 instances
 Configure two network interfaces for each instance, one for SSH access, the other for internal networks access.
-  - The network interfaces which are connecting to the outside internet **should be associated with one of the elastic IP addresses** we got. The instance can use this interface to connect to the open Internet domains and can also be accessed by outside SSH clients.
-  - The network interfaces which are used for internal communications should **share the same subnet domains** for three instances so that they can access to each other in this same subnet domains. Here, we chose 10.0.2.0/24 domain as the internal networks domain.
+- The network interfaces which are connecting to the outside internet **should be associated with one of the elastic IP addresses** we got. The instance can use this interface to connect to the open Internet domains and can also be accessed by outside SSH clients.
+- The network interfaces which are used for internal communications should **share the same subnet domains** for three instances so that they can access to each other in this same subnet domains. Here, we chose 10.0.2.0/24 domain as the internal networks domain.
 
 The mapping relations between each instance's network interfaces is shown below.
 
